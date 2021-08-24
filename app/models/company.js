@@ -44,6 +44,14 @@ export const CompanyEvent = sequelize.define('company_event', {
 }, {
   tableName: 'company_events'
 });
+CompanyEvent.belongsTo(Company, {
+  foreignKey: 'companyId',
+  as: 'company'
+});
+CompanyEvent.belongsTo(Event, {
+  foreignKey: 'eventId',
+  as: 'event'
+});
 
 Company.belongsToMany(Event, {
   through: 'company_events'

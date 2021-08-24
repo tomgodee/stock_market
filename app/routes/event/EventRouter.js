@@ -17,7 +17,8 @@ eventRouter.get('/company', async (req, res) => {
     const events = await EventModel.getAllCompanyEvent();
     res.status(200).send(events);
   } catch (err) {
-    res.send(err);
+    // in the previous code: error occured.
+    res.status(406).send(err);
   }
 });
 
