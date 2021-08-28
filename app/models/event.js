@@ -68,8 +68,8 @@ const getAllCompanyEvent = async () => {
   //   include: Company,
   // });
   return await CompanyEvent.findAll({
-    include: ['company', 'event']
-})
+    include: [Company, Event]
+  });
 };
 
 const getOne = async () => {

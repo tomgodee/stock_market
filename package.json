@@ -11,7 +11,7 @@
     "clean": "rimraf dist-app",
     "transpile": "babel ./app --out-dir dist-app",
     "build": "npm run clean && npm run transpile",
-    "dev": "cross-env NODE_ENV=development npm-run-all build app",
+    "dev": "NODE_ENV=development npm-run-all build app",
     "prod": "NODE_ENV=production npm run build && npm run app",
     "watch": "nodemon",
     "start:pm2": "pm2 start ./dist-app/bin/www.js",

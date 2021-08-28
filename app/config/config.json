@@ -3,7 +3,7 @@
     "username": "postgres",
     "password": "zxc321",
     "database": "stock_market",
-    "host": "localhost",
+    "host": "db",
     "dialect": "postgres"
   }
 }
