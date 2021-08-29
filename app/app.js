@@ -53,3 +53,7 @@ app.use('/user', userRouter);
 app.use('/company', companyRouter);
 app.use('/sector', sectorRouter);
 app.use('/event', eventRouter);
+
+export {
+  httpServer,
+};
