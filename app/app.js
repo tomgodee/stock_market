@@ -1,6 +1,7 @@
 import express from 'express';
 import path from 'path';
 import http from 'http';
+import https from 'https';
 import cors from './middlewares/cors';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
@@ -10,11 +11,21 @@ import userRouter from './routes/user/UserRouter';
 import companyRouter from './routes/company/CompanyRouter';
 import sectorRouter from './routes/sector/SectorRouter';
 import eventRouter from './routes/event/EventRouter';
+import fs from 'fs';
 var app = express();
 
-const httpServer = http.createServer(app);
+let httpServer;
 
-// Http server
+if (process.env.NODE_ENV === 'production') {
+  const options = {
+    key: fs.readFileSync(`${process.env.SSL_LOCATION}/privkey.pem`),
+    cert: fs.readFileSync(`${process.env.SSL_LOCATION}/fullchain.pem`)
+  };
+  httpServer = https.createServer(options, app);
+} else {
+  httpServer= http.createServer(app);
+}
+
 // Default middlewares
 app.use(logger('dev'));
 app.use(express.json());
@@ -42,5 +53,3 @@ app.use('/user', userRouter);
 app.use('/company', companyRouter);
 app.use('/sector', sectorRouter);
 app.use('/event', eventRouter);
-
-export default httpServer;
