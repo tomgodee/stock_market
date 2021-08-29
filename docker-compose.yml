@@ -6,8 +6,8 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data
     image: "postgres:13"
-    environment:
-      - POSTGRES_PASSWORD=zxc321
+    env_file:
+      - .env
     networks:
       - stock_market_network
   api:
