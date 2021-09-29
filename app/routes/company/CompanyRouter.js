@@ -17,4 +17,13 @@ companyRouter.get('/', async (req, res) => {
   }
 });
 
+companyRouter.get('/:companyId', async (req, res) => {
+  try {
+    const company = await CompanyModel.getOneByPK(req.params.companyId);
+    res.status(200).send(company);
+  } catch (err) {
+    res.send(err);
+  }
+});
+
 export default companyRouter;

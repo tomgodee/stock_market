@@ -2,12 +2,12 @@ FROM node:14.17-alpine
 
 WORKDIR /usr/src/stock_market
 
-# COPY package*.json ./
-# 
-# RUN npm install
-# 
-# COPY . .
+COPY package*.json ./
 
-# EXPOSE 5000
+RUN npm install
+
+COPY . .
+
+EXPOSE 5000
 
 CMD [ "npm", "run", "watch" ]

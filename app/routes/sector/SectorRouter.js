@@ -14,9 +14,8 @@ sectorRouter.get('/', async (req, res) => {
 
 sectorRouter.get('/:sectorId/company', async (req, res) => {
   try {
-    console.log('req.params', req.params);
-    const sectors = await SectorModel.getOneWithCompany(req.params.sectorId);
-    res.status(200).send(sectors);
+    const sector = await SectorModel.getOneWithCompany(req.params.sectorId);
+    res.status(200).send(sector);
   } catch (err) {
     res.send(err);
   }

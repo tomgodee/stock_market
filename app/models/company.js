@@ -85,18 +85,12 @@ const getAllBySector = async (sectorName) => {
     where: {
       sectorId: sector.id,
     }
-  })
-  // return Company.findAll({
-  //   include: [{
-  //     model: Sector,
-  //     where: { name: sectorName }
-  //   }]
-  // });
+  });
 };
 
 const getOne = async () => {
   return await Company.findOne({
-    attributes: [ 'id', 'name', 'role'],
+    attributes: [ 'id', 'name', 'stock_price', 'description'],
     where: {
       id: 1
     }
@@ -105,15 +99,15 @@ const getOne = async () => {
 
 const getOneByPK = async (id) => {
   return await Company.findByPk(id, {
-    attributes: [ 'id', 'name', 'role'],
+    attributes: [ 'id', 'name', 'stock_price', 'description'],
   });
 };
 
 const updateOne = async () => {
   return await Company.update({
       name: "Jane 1",
-      role: 'user',
-      hashed_password: 'secret',
+      stock_price: 100,
+      description: 'secret',
     },
     { 
       where: {

@@ -8,6 +8,7 @@ const corsOptionsDelegate = function (req, callback) {
   if (allowedOrigins.indexOf(req.header('Origin')) !== -1) {
     corsOptions = {
       origin: allowedOrigins,
+      exposedHeaders: 'access_token',
     }
   } else {
     corsOptions = {

@@ -11,7 +11,7 @@ module.exports = {
       {id: 8, name: 'Nexus Frontiertech', stock_price: 22, description: 'A small cute company that the creator of this game is working for :)', sectorId: 1, createdAt: new Date(), updatedAt: new Date()},
       {id: 9, name: 'Birdhouse', stock_price: 126.90, description: 'A major company in the F&B sector that is infamouse for their enslaving system.', sectorId: 2, createdAt: new Date(), updatedAt: new Date()},
       {id: 10, name: 'Koka-kola', stock_price: 56.64, description: 'A company that own the black carbonated water that makes you fat.', sectorId: 2, createdAt: new Date(), updatedAt: new Date()},
-      {id: 11, name: 'Vinadiary', stock_price: 3.85, description: 'A huge company with dairy products that contain mostly chemicals.', sectorId: 2, createdAt: new Date(), updatedAt: new Date()},
+      {id: 11, name: 'Vinadairy', stock_price: 3.85, description: 'A huge company with dairy products that contain mostly chemicals.', sectorId: 2, createdAt: new Date(), updatedAt: new Date()},
       {id: 12, name: 'Dad & Son', stock_price: 179.44, description: 'Infamous for their cancerous cosmetics products.', sectorId: 3, createdAt: new Date(), updatedAt: new Date()},
       {id: 13, name: 'Trapphaco', stock_price: 3.44, description: 'A Vietnamese pharmaceutical company.', sectorId: 3, createdAt: new Date(), updatedAt: new Date()},
       {id: 14, name: 'Tekkombank', stock_price: 2.33, description: 'One of the biggest bank in Vietnam with a terrible mobile app.', sectorId: 4, createdAt: new Date(), updatedAt: new Date()},

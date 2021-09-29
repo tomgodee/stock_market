@@ -14,6 +14,9 @@ export const Sector = sequelize.define('sector', {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  description: {
+    type: DataTypes.STRING,
+  }
 }, {
   tableName: 'sectors'
 });
@@ -27,7 +30,8 @@ const createOne = async () => {
 
 const getAll = async () => {
   return await Sector.findAll({
-    attributes: [ 'id', 'name']
+    attributes: [ 'id', 'name', 'description'],
+    order: ['id']
   });
 };
 
