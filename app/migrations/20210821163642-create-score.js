@@ -16,6 +16,10 @@ module.exports = {
       userId: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        references: {
+          model: 'users', // the value is another table's name, not a model's name
+          key: 'id',
+        },
       },
       createdAt: {
         allowNull: false,
