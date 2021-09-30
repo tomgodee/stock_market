@@ -49,8 +49,8 @@ npx sequelize db:seed --seed <seed_name.js>
 ```
 docker exec -it stock_market_api_1 sh
 npx sequelize db:create
-npx sequelize db:migrate 
-npx sequelize db:seed:all
+npm run migrate
+npm run seed
 ```
 
 * To run this project
