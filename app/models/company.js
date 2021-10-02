@@ -74,7 +74,7 @@ const createOne = async () => {
 
 const getAll = async () => {
   return await Company.findAll({
-    attributes: [ 'id', 'name', 'description', 'stock_price']
+    attributes: [ 'id', 'name', 'ticker', 'description', 'stock_price']
   });
 };
 

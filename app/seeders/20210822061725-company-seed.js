@@ -3,10 +3,10 @@ module.exports = {
     return await queryInterface.bulkInsert('companies', [
       {id: 1, name: 'Orange', stock_price: 148.19, description: 'A leading tech company well-known for their high pricing.', sectorId: 1, createdAt: new Date(), updatedAt: new Date()},
       {id: 2, name: 'Samsing', stock_price: 61.87, description: 'A family Singapore-based company majoring in electronics and telecommunication services.', sectorId: 1, createdAt: new Date(), updatedAt: new Date()},
-      {id: 3, name: 'Imizen', stock_price: 3199.95, description: 'Dubbed as the king of retail market, this company also own a big share in cloud computing.', sectorId: 1, createdAt: new Date(), updatedAt: new Date()},
+      {id: 3, name: 'Imizen', stock_price: 399.95, description: 'Dubbed as the king of retail market, this company also own a big share in cloud computing.', sectorId: 1, createdAt: new Date(), updatedAt: new Date()},
       {id: 4, name: 'Chill', stock_price: 546.88, description: "A company that own much of the streaming service market share even with their 'meh' content.", sectorId: 1, createdAt: new Date(), updatedAt: new Date()},
       {id: 5, name: 'Gigantichard', stock_price: 304.36, description: 'Well-known for their OS called Doors and their weird counting system.', sectorId: 1, createdAt: new Date(), updatedAt: new Date()},
-      {id: 6, name: 'Doodle', stock_price: 2748.59, description: 'A company that can find whatever you need on the Internet as well as track whatever you do.', sectorId: 1, createdAt: new Date(), updatedAt: new Date()},
+      {id: 6, name: 'Doodle', stock_price: 748.59, description: 'A company that can find whatever you need on the Internet as well as track whatever you do.', sectorId: 1, createdAt: new Date(), updatedAt: new Date()},
       {id: 7, name: 'Facelook', stock_price: 359.37, description: 'The biggest social media company that own not only all your data but your life as well.', sectorId: 1, createdAt: new Date(), updatedAt: new Date()},
       {id: 8, name: 'Nexus Frontiertech', stock_price: 222, description: 'A small cute company that the creator of this game is working for :)', sectorId: 1, createdAt: new Date(), updatedAt: new Date()},
       {id: 9, name: 'Birdhouse', stock_price: 126.90, description: 'A major company in the F&B sector that is infamouse for their enslaving system.', sectorId: 2, createdAt: new Date(), updatedAt: new Date()},
