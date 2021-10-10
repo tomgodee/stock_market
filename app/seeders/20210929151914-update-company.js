@@ -6,7 +6,7 @@ module.exports = {
     await queryInterface.bulkUpdate('companies', { ticker: 'SSG' }, { id: 2 })
     await queryInterface.bulkUpdate('companies', { ticker: 'IMZ' }, { id: 3 })
     await queryInterface.bulkUpdate('companies', { ticker: 'CHL' }, { id: 4 })
-    await queryInterface.bulkUpdate('companies', { ticker: 'GGH' }, { id: 5 })
+    await queryInterface.bulkUpdate('companies', { ticker: 'MCS' }, { id: 5 })
     await queryInterface.bulkUpdate('companies', { ticker: 'DDL' }, { id: 6 })
     await queryInterface.bulkUpdate('companies', { ticker: 'FLK' }, { id: 7 })
     await queryInterface.bulkUpdate('companies', { ticker: 'NFT' }, { id: 8 })

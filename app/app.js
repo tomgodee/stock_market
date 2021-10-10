@@ -11,6 +11,7 @@ import userRouter from './routes/user/UserRouter';
 import companyRouter from './routes/company/CompanyRouter';
 import sectorRouter from './routes/sector/SectorRouter';
 import eventRouter from './routes/event/EventRouter';
+import scoreRouter from './routes/score/ScoreRouter';
 import fs from 'fs';
 var app = express();
 
@@ -53,6 +54,7 @@ app.use('/user', userRouter);
 app.use('/company', companyRouter);
 app.use('/sector', sectorRouter);
 app.use('/event', eventRouter);
+app.use('/score', scoreRouter);
 
 export {
   httpServer,
