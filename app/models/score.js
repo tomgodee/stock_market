@@ -1,5 +1,6 @@
 import { DataTypes, where } from 'sequelize';
 import sequelize from '../services/DatabaseService';
+import { User } from './user';
 
 export const Score = sequelize.define('score', {
   id: {
@@ -35,7 +36,20 @@ const updateOne = async (score, userId) => {
   });
 };
 
+const getMany = async (score, userId) => {
+  return await Score.findAll({
+    attributes: [ 'id', 'score', 'createdAt'],
+    order: [['score', 'DESC']],
+    limit: 10,
+    include: [{
+      model: User,
+      attributes: [ 'id', 'name'],
+    }]
+  });
+};
+
 export default {
   createOne,
   updateOne,
+  getMany,
 };

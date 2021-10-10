@@ -15,4 +15,14 @@ scoreRouter.post('/', async (req, res) => {
   }
 });
 
+scoreRouter.get('/', verifyToken);
+scoreRouter.get('/', async (req, res) => {
+  try {
+    const topScores = await ScoreModel.getMany();
+    res.status(200).send(topScores);
+  } catch (err) {
+    res.send(err);
+  }
+});
+
 export default scoreRouter;
